@@ -1,0 +1,16 @@
+.missionContainer {
+    display: inline-block;
+    width: 25%;
+    height: 400px;
+    vertical-align: top;
+    border: solid lightgray;
+    margin: 10px;
+    margin-left: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.missionList {
+    padding: 10px;
+}
+

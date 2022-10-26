@@ -1,0 +1,16 @@
+.roverCardContainer {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.roverImage {
+    width: 75%;
+    height: 75%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

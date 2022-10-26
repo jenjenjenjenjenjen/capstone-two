@@ -1,0 +1,17 @@
+.potd {
+    width: 500px;
+    height: 800px;
+}
+
+.potdContainer {
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.potdInfo {
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+
