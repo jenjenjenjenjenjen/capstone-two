@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# NASA API Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project can be found as [NASA API Explorer](link.here).
 
-## Available Scripts
+## What does this site do?
 
-In the project directory, you can run:
+I built this website in order to provide people with just a snippet of the data that NASA provides for free with
+their APIs. There is countless amounts of data that is freely available to the public, but I think that it is
+silly that you must have the knowledge of developer to access it. On this site you can explore all types of data, from natural events that are being trackedd here on Earth, to the weather on Mars.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I built this site with a number of features, including:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Mars Rover Photos
 
-### `npm test`
+This feature allows users to fill out a form for a specific Mars rover, and displays the photos taken by that rover, along with basic details, like the date the photo was taken, as well as which camera on the rover was used to take the photo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Photos from the Earth Polychromatic Imaging Camera
 
-### `npm run build`
+This feature allows users to see natural or enhanced photos of the Earth based on a date that they provide. They will also get information on the geographical coordinates of where the camera is pointing at the Earth, as well as where the sun, moon, and satellite that took the image are positioned in space.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Mars Weather
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This feature uses NASAs reusable Mars Weather component. It allows users to see the weather on Mars in Farenheight or Celecius, and shows a 7-day forecast for the planet.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Earth Observatory Natural Event Tracker
 
-### `npm run eject`
+This feature shows users natural events on Earth that NASA is currently tracking. Users can enter a number of days to see events tracked that many days before the current date. This will show users the name of the event, the category of event it falls under, as well as links to sources for more information about that event.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Mars Mission Manifests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This feature allows users to select a Mars rover and see all mission manifests from that rover. A mission manifest includes the Earth Date of the mission, the Sol (Mars day) of that mission, how many photos were taken, and which cameras were used.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### NASA's Astronomy Picture of the Day
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This feature shows users NASA's Astronomy Picture of the Day along with a short description provided by the API.
 
-## Learn More
+## Testing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Tests are located in the components file, and should be in similar order to their corresponding components. Tests were written with Jest and the React Testing Library.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run tests, use `npm test`. This will run all tests. Specify a file name after this command to run a single file.
 
-### Code Splitting
+## User Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+As a user enters the website, they will see a short description of the purpose of the site, and a navbar with plenty of options. If the user wanted to search Mars Rover photos, they could select the tab for Mars Rover photos, and then select which rover to view photos from. Then, the user can either fill out the form to specify which photos they'd like to see, or just select 'See Latest Photos'. Photos will then load and appear in the browser. The user can hover over each photo to see more information.
 
-### Analyzing the Bundle Size
+## API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This application was built using a number of APIs, documentation for all of which can be found [here](https://api.nasa.gov).
+APIs I used were:
+- APOD
+- EONET
+- EPIC
+- Insight
+- Mars Rover Photos
 
-### Making a Progressive Web App
+I also built a custom back-end API to handle making all of the requests to these various APIs. This API is very simple, created with Express. It only handles GET requests to fetch information from NASAs data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Tech Stack
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For the front end of this project I chose to use React with the React Router and Axios to make requests to my API.
+For the back end, I used an Express application to build my API, along with Axios to make requests to the NASA APIs.

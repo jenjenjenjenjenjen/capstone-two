@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import Event from './Event';
+import '../styles/Eonet.css';
 
 function Eonet () {
     let [formData, setFormData] = useState();
@@ -27,8 +28,10 @@ function Eonet () {
             <h1>Search Natural Events</h1>
             <form onChange={handleChange} onSubmit={handleSubmit}>
                 <label htmlFor='days'>Enter a number of days to see results for that many days previous to today.</label>
+                <br></br>
                 <input id='days' name='days' type='number'></input>
-                <button type='submit'>Search</button>
+                <br></br>
+                <button type='submit' className='eonetBtn'>Search</button>
             </form>
             <div>
             {results.map((e) => (

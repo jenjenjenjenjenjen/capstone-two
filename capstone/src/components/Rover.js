@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 import Photo from './Photo';
 import PhotoForm from './PhotoForm';
 import '../styles/Rover.css';
+import Description from './Description';
 
 function Rover({ name }) {
     const [roverData, setRoverData] = useState([]);
@@ -23,17 +24,13 @@ function Rover({ name }) {
     return (
         <div>
             <h1>{roverData.name} Rover</h1>
+            <div className='roverContainer'>
             <div className='formContainer'>
                 <PhotoForm setPhotos={setPhotos} roverData={roverData}/>
+                <button onClick={getLatestPhotos} className='photoFormButton'>See Latest Photos</button>
             </div>
-            <button onClick={getLatestPhotos}>See Latest Photos</button>
-            <div className='photosContainer'>
-                {photos ? photos.map((p) => (
-                    <Photo photo={p} />
-                )) : null}
-            </div>
-            <div>
-                <ul>
+            <div className='roverInfoContainer'>
+                <ul className='roverInfoList'>
                     <li>Launch date: {roverData.launch_date}</li>
                     <li>Landing date: {roverData.landing_date}</li>
                     <li>Status: {roverData.status}</li>
@@ -41,6 +38,15 @@ function Rover({ name }) {
                     <li>Max date: {roverData.max_date}</li>
                     <li>Total photos: {roverData.total_photos}</li>
                 </ul>
+            </div>
+            <div className='roverDescriptionContainer'>
+                <Description name={name}/>
+            </div>
+            </div>
+            <div className='photosContainer'>
+                {photos ? photos.map((p) => (
+                    <Photo photo={p} />
+                )) : null}
             </div>
         </div>
     )

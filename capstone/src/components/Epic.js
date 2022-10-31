@@ -44,17 +44,18 @@ function Epic() {
                 <input type='radio' id='enhanced' name='type' value='enhanced'></input>
                 <label htmlFor='enhanced'> Enhanced</label><br></br>
                 <label htmlFor="date">Please select a date: </label>
+                <br></br>
                 <input type='date' name='date' id='date'></input>
-                <button type='submit'>Get Photos</button>
+                <br></br>
+                <button type='submit' id='epicBtn'>Get Photos</button>
             </form>
             <div>
-                {!photos.length ? null : <div>
-                    <div>
+                {!photos.length ? null : <div className='earthContainter'>
+                    <div className='earthInfoContainer'>
+                    <div className='earthPhotoContainer'>
                         <img className='earthPhoto' src={BASE_PHOTO_URL + formData.type + '/' + formData.date.split('-')[0] + '/' + formData.date.split('-')[1] + '/' + formData.date.split('-')[2] + '/png/' + photos[photoNum].image + '.png?api_key=' + API_KEY}></img>
-                        {photoNum === 0 ? null : <button onClick={prevPhoto}><FontAwesomeIcon icon={faArrowLeft} /></button>}
-                        {photoNum === photos.length - 1 ? null : <button onClick={nextPhoto}><FontAwesomeIcon icon={faArrowRight} /></button>}
                     </div>
-                    <div>
+                    <div className='photoInfoContainer'>
                         <p>Geographical coordinates the satellite is looking at: 
                             <p>Latitude: {photos[photoNum].coords.centroid_coordinates.lat}</p>
                             <p>Longitude: {photos[photoNum].coords.centroid_coordinates.lon}</p>
@@ -74,6 +75,11 @@ function Epic() {
                             <p>Y: {photos[photoNum].coords.sun_j2000_position.y}</p>
                             <p>Z: {photos[photoNum].coords.sun_j2000_position.z}</p>
                         </p>
+                    </div>
+                    </div>
+                    <div className='buttonsContainer'>
+                        {photoNum === 0 ? null : <button onClick={prevPhoto} className='nextBtn'><FontAwesomeIcon icon={faArrowLeft} /></button>}
+                        {photoNum === photos.length - 1 ? null : <button onClick={nextPhoto} className='nextBtn'><FontAwesomeIcon icon={faArrowRight} /></button>}
                     </div>
                 </div>}
             </div>

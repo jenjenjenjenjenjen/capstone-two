@@ -34,7 +34,7 @@ function Navbar() {
                 <Link to='/potd'>NASA's Astronomy Picture of the Day</Link>
             </li>
             <li className='navLink'>
-                <Link to='/'>About</Link>
+                <Link to='/about'>About</Link>
             </li>
         </ul>
     )

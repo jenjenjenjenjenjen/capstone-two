@@ -7,6 +7,8 @@ import PhotoOfTheDay from './components/PhotoOfTheDay';
 import Epic from './components/Epic';
 import MarsWeather from './components/MarsWeather';
 import Eonet from './components/Eonet';
+import Home from './components/Home';
+import About from './components/About';
 import { Route, BrowserRouter } from 'react-router-dom';
 
 
@@ -25,7 +27,8 @@ function App() {
         <Route exact path='/epic'><Epic /></Route>
         <Route exact path='/marsweather'><MarsWeather /></Route>
         <Route exact path='/eonet'><Eonet /></Route>
-        <Route exact path='/'><h1>Home</h1></Route>
+        <Route exact path='/about'><About /></Route>
+        <Route exact path='/'><Home /></Route>
       </BrowserRouter>
     </div>
   );

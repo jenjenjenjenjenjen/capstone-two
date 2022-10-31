@@ -1,6 +1,9 @@
+import '../styles/Event.css';
+
 function Event({e}) {
     return (
-        <div>
+        <div className='eventContainer'>
+            <div className='eventInfo'>
             <h3>{e.title}</h3>
             {e.description === "" ? null : <p><b>Description: </b>{e.description}</p>}
                 <p><b>Category: </b> {e.categories[0].title}</p>
@@ -13,6 +16,7 @@ function Event({e}) {
                         ))}
                     </ul>
                 </p>
+            </div>
         </div>
     )
 }

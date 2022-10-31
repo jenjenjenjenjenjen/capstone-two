@@ -27,20 +27,28 @@ function PhotoForm({ setPhotos, roverData }) {
         setPhotos(photos.data)
     }
     return (
-        <form onChange={handleChange} onSubmit={handleSubmit} className='photoForm'>
+        <div className='photoFormContainer'>
+            <form onChange={handleChange} onSubmit={handleSubmit} className='photoForm'>
                 <label htmlFor="camera">Choose a camera: </label>
-                <select name="camera" id="camera">
+                <br></br>
+                <select name="camera" id="camera" className='photoInput'>
                     <option value={null}>All Cameras</option>
                     {!roverData.cameras ? null : roverData.cameras.map((cam) => (
                         <option value={cam.name.toLowerCase()}>{cam.full_name}</option>
                     ))}
                 </select>
-                <label htmlFor="sol">Sol: </label>
-                <input type='number' name="sol" id="sol"></input>
-                <label htmlFor="earth_date">Earth Date: </label>
-                <input type='date' name="earth_date" id="earth_date"></input>
-                <button type="submit">Get Photos</button>
+                <br></br>
+                <label htmlFor='sol'>Sol: </label>
+                <br></br>
+                <input type='number' name="sol" id="sol" className='photoInput'></input>
+                <br></br>
+                <label htmlFor='earth_date'>Earth Date: </label>
+                <br></br>
+                <input type='date' name="earth_date" id="earth_date" className='photoInput'></input>
+                <br></br>
+                <button type="submit" className='photoFormButton'>Get Photos</button>
             </form>
+        </div>
     )
 }
 

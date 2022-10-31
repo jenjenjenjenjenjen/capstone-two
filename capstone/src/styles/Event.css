@@ -1,0 +1,13 @@
+.eventContainer {
+    display: inline-block;
+    width: 25%;
+    height: 200px;
+    vertical-align: top;
+    border: solid lightgray;
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.eventInfo {
+    padding: 10px;
+}

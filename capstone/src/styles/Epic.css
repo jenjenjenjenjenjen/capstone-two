@@ -2,3 +2,45 @@
     width: 600px;
     height: 600px;
 }
+
+#epicBtn {
+    padding: 10px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 33.33%;
+    margin: 10px;
+}
+
+#date {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    width: 33.33%;
+}
+
+.earthPhotoContainer {
+    display: inline-block;
+    width: 50%;
+}
+
+.photoInfoContainer {
+    display: inline-block;
+    width: 50%;
+    vertical-align: text-bottom;
+}
+
+.nextBtn {
+    padding: 10px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 45%;
+    margin: 10px;
+}

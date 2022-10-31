@@ -2,7 +2,7 @@ import '../styles/RoverCard.css';
 import { Link } from 'react-router-dom';
 
 function RoverCard({ name, imgUrl }) {
-    let path = `/${name}`;
+    let path = `/marsrover/${name}`;
     return (
         <Link to={path}>
             <div className='roverCardContainer'>

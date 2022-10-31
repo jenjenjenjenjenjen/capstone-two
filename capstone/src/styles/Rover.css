@@ -1,8 +1,27 @@
-
+.roverContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .photosContainer:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.formContainer {
+    width: 33.33%;
+    float: left;
+}
+
+.roverInfoContainer {
+    width: 33.33%;
+    float: left;
+}
+
+.roverDescriptionContainer {
+    width: 33.33%;
+    float: left;
 }
 
